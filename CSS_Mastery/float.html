@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>float</title>
+	<style type="text/css">
+	.lbox{
+		height: 220px;
+		width: 400px;
+		border: 1px dotted;
+		margin: 2px;
+	}
+	.lbox div{
+		background-color: #5ac21c;
+		width:80px;
+		border: 1px dashed;
+		margin: 10px;
+		height:50px;
+	}
+	.bbox{
+		background: gray;
+		border: 1px solid black;
+	}
+	.bbox div{
+		float: left;
+	}
+	.bbox p{
+		float: right;
+	}
+	.aaclear:after{
+		content: ".";
+		height: 0;
+		visibility: hidden;
+		display: block;
+		clear: both;
+	}
+	</style>
+</head>
+<body>
+	<div class="lbox">
+		<div><span>框1</span></div>
+		<div><span>框2</span></div>
+		<div><span>框3</span></div>
+	</div>
+	<div class="lbox">
+		<div style="float:right;"><span>框1</span></div>
+		<div><span>框2</span></div>
+		<div><span>框3</span></div>
+	</div>
+	<div class="lbox">
+		<div style="float:left;"><span>框1</span></div>
+		<div><span>框2</span></div>
+		<div><span>框3</span></div>
+	</div>
+	<div class="lbox">
+		<div style="float:left"><span>框1</span></div>
+		<div style="float:left"><span>框2</span></div>
+		<div style="float:left"><span>框3</span></div>
+	</div>
+
+	<div class="lbox" style="width:250px;">
+		<div style="float:left"><span>框1</span></div>
+		<div style="float:left"><span>框2</span></div>
+		<div style="float:left"><span>框3</span></div>
+	</div>
+	<div class="lbox" style="width:250px;">
+		<div style="float:left;height: 80px;"><span>框1</span></div>
+		<div style="float:left"><span>框2</span></div>
+		<div style="float:left"><span>框3</span></div>
+	</div>
+	<div class="lbox">
+		<div><span>框1</span></div>
+		<p>內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容</p>
+		<p>內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容</p>
+		<p>內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容</p>
+	</div>
+	<div class="lbox">
+		<div style="float:left;height: 90px;"><span>框1</span></div>
+		<p>內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容</p>
+		<p>內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容</p>
+		<p>內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容</p>
+	</div>
+	<div class="lbox">
+		<div style="float:left;height: 90px;"><span>框1</span></div>
+		<p>內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容</p>
+		<p style="clear:left;">內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容</p>
+		<p>內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容</p>
+	</div>
+
+	<div class="bbox">
+		<div style="height:50px;width:50px;"></div>
+		<p>foofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoo</p>
+		<div style="clear:both;float:none;"></div>
+	</div>
+	<div class="bbox" style="overflow:auto;">
+		<div style="height:50px;width:50px;"></div>
+		<p>foofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoo</p>
+	</div>
+	<div class="bbox aaclear">
+		<div style="height:50px;width:50px;"></div>
+		<p>foofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoo</p>
+	</div>
+	<div class="bbox">
+		<div style="height:50px;width:50px;"></div>
+		<p>foofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoo</p>
+	</div>
+
+</body>
+</html>

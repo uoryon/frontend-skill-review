@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>position</title>
+</head>
+<style type="text/css">
+	.container{
+		width:400px;
+		height: 200px;
+		margin: 2px;
+		border: 1px dotted;
+	}
+	.k1, .k2, .k3{
+		display: inline-block;
+		width: 80px;
+		height: 50px;
+		border:1px dashed;
+		background-color: #5ac21c;
+		margin: 5px;
+	}
+	.re{
+		position: relative;
+		top: 20px;
+		left: 20px;
+	}
+	.ab{
+		position: absolute;
+		top:20px;
+		left: 20px;
+	}
+</style>
+<body>
+<div class="container">
+	<span class="k1">1</span>
+	<span class="k2 re">1</span>
+	<span class="k3">1</span>
+</div>
+<div class="container" style="position:relative;">
+	<span class="k1">2</span>
+	<span class="k2 ab">2</span>
+	<span class="k3">2</span>
+</div>
+<div class="container">
+	<span class="k1">3</span>
+	<span class="k2 ab">3</span>
+	<span class="k3">3</span>
+</div>
+<p>仔細查看這些的區別</p>
+</body>
+</html>
