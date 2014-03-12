@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>佈局</title>
+  <style type="text/css">
+    .wrapper{
+        width: 920px;
+        margin: 0 auto;
+        /*ie不支持margin:0 auto;但是可以用text-align:center;實現*/
+    }
+    body{
+        /*text-align: center;*/
+    }
+    .content{
+        overflow: hidden;
+    }
+    .content .primary{
+        width:650px;
+        padding-right: 20px;
+        float: right;
+        display: inline;
+    }
+    .content .secondary{
+        width:230px;
+        float: left;
+        display: inline;
+    }
+  </style>
+</head>
+<body>
+	<p>所有的CSS佈局技術的根本都是3個基本概念：定位，浮動，和外邊距操作</p>
+    <h3>使用外边距让容器元素居中</h3>
+    <div class="wrapper">   
+    </div>
+
+    <div class="content">
+        <div class="primary">test</div>
+        <div class="secondary">abc</div>
+    </div>
+</body>
+</html>
