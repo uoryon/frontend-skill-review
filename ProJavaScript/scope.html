@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>变量作用域</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var name = "lala";
+		name.age = 27;
+		console.log(name.age);
+
+
+		var num1 = 5;
+		var num2 = num1;
+		num2 = 2;
+		console.log(num1);
+
+		var k = new Object();
+		var b = k;
+		k.name = 'lala';
+		console.log(b.name);
+
+
+
+		function setName(obj){
+			obj.name = "lala";
+			obj = new Object();
+			obj.name = "fafa";
+		}
+		var person = new Object();
+		setName(person);
+		console.log(person.name);
+
+
+		//所有全局对象都是作为window的属性和方法创建的。每个函数都有自己的执行环境。
+	</script>
+</body>
+</html>
