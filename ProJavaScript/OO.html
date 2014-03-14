@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>面向對象的程序設計</title>
+</head>
+<body>
+    <p>工廠模式</p>
+    <script type="text/javascript">
+    //shu version
+    function createPerson(name, age, job){
+        var o = new Object();
+        o.name = name;
+        o.job = job;
+        o.sayName = function(){
+            alert(this.name);
+        }
+        return o;
+    }
+    function createPersonA(pty){
+        var o = new Object();
+        for(a in pty){
+            o.a = pty.a;
+        }
+        return o;
+    }
+    var person1 = createPerson("su", 20, "SE");
+    </script>
+    <p>構造器模式</p>
+    <script type="text/javascript">
+    function CreatePerson(name, age, job){
+        this.name = name;
+        this.age = age;
+        this.job = job;
+        this.sayName = function(){
+            alert(this.name);
+        }
+    }
+    </script>
+    <p>原型模式（每個函數都有一個prototype屬性）</p>
+    <script type="text/javascript">
+    function Person(){
+
+    }
+    Person.prototype.name = 'suhai';
+    </script>
+</body>
+</html>

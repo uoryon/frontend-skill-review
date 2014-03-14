@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>對象</title>
+</head>
+<body>
+    <p>Global對象，作為window對象的一部份加以實現。全局的變量和函數都成為window對象的屬性。</p>
+    <p>獲取Global對象的方法。</p>
+    <pre>var global = function(){ return this;}()</pre>
+    <p>ECMAScript中有兩種屬性：數據屬性和訪問器屬性</p>
+    <p>數據屬性</p>
+    <ul>
+        <li><p>[[Configurable]]：表示能否通過delete刪除屬性從而重新定義屬性，能否修改屬性的特性，或者能否把屬性修改為訪問器屬性。默認true。</p></li>
+        <li><p>[[Enumerable]]：表示能否通過for-in循環返回屬性。默認true。</p></li>
+        <li><p>[[Writable]]：表示能否修改屬性的值</p></li>
+        <li><p>[[Value]]：包含這個屬性的數據值。</p></li>
+    </ul>
+    <p>修改默認屬性必須使用Object.defineProperty()</p>
+    <script type="text/javascript">
+    var book = {
+        _year : 2004,
+        edition : 1
+    }
+    Object.defineProperty(book, "year", {
+        get: function(){
+            return this._year;
+        },
+        set:function(n){
+            if(n>2004){
+                this._year = n;
+                this.edition += n - 2004;
+            }
+        }
+    });
+    book.year = 2005;
+    console.log(book.edition);
+    </script>
+</body>
+</html>
