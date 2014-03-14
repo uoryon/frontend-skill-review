@@ -36,12 +36,23 @@
         }
     }
     </script>
-    <p>原型模式（每個函數都有一個prototype屬性）</p>
+    <p>原型模式（每個函數都有一個prototype屬性）。每個實例都共享這個屬性。</p>
     <script type="text/javascript">
     function Person(){
 
     }
     Person.prototype.name = 'suhai';
+
+    var pers1 = new Person();
+    var pers2 = new Person();
+
+
+    pers1.name = 'wawa';
+    console.log(pers1.name);
+    console.log(pers2.name);
+
+    delete pers1.name;
+    console.log(pers1.name);
     </script>
 </body>
 </html>
