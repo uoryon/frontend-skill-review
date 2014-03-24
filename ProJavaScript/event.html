@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>測試捕獲流和冒泡流</title>
+    <style type="text/css">
+        .first, .second{
+            width: 60px;
+            height: 60px;
+            background: lightyellow;
+            border:4px solid lightblue;
+            margin: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="first">
+        <p id="neirong">內容</p>
+    </div>
+    <div class="second">背景</div>
+    <script type="text/javascript">
+        //修改true和false，了解事件發生的時間。
+        document.querySelector('.first').addEventListener('click', function(){
+            alert('first');
+        }, true);
+        document.querySelector('#neirong').addEventListener('click', function(e){
+            alert('neirong');
+            e.stopPropagation();
+        }, false);
+    </script>
+</body>
+</html>
